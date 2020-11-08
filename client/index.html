@@ -7,8 +7,12 @@
   </head>
   <body>
     <div id="log">我是默认值</div>
+    <script>
+      window.startTime = Date.now();
+    </script>
     <script type="module">
       import { testFunc } from "./modules/a.js";
+      console.log("loaded:", Date.now() - window.startTime);
       testFunc();
     </script>
   </body>
